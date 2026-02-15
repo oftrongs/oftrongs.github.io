@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Causal Inference-related notes</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>a{text-decoration: none;}</style>
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div class="border-end bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading border-bottom bg-light">W-Archive</div>
+            <div class="list-group list-group-flush">
+                <!-- <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="Contact.html">Contact</a> -->
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="Stats&ML.html">Stats&ML</a>
+                <!-- <a class="list-group-item list-group-item-action list-group-item-light p-3" -->
+                    <!-- href="Stats&Econ.html">Stats&Econ</a> -->
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="Stats&Env.html">Stats&Env</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="Clutter.html">Clutter</a>
+            </div>
+        </div>
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper">
+            <!-- Top navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-primary" id="sidebarToggle">☰</button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"><span
+                            class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                            <!-- <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>-->
+                            <!-- <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#!">Action</a>
+                                        <a class="dropdown-item" href="#!">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#!">Something else here</a>
+                                    </div>
+                                </li>-->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page content-->
+            <div class="container-fluid">
+                <h4 class="mt-4">Here are some notes related to Causal Inference.</h4>
+
+                <p>I learned the course <a href="https://www2.stat.duke.edu/~fl35/CausalInferenceClass.html">Causal Inference</a> of Prof.Li during my first semester of master, which I highly recommended. And here are some <a href="causal.pdf">notes</a> of the class.
+
+                <details>
+                        <summary>Two views: Finite Population and Super Population(work in progress)</summary>
+                        <ul>
+                            <li>
+                                <a href="./Causal/notes/RCT_and_OB_math_0202.pdf">Two views: Finite Population and Super Population</a>
+                                <p>主要讨论了不考虑协变量的情况下的一些estimators，以及随机实验与观测性研究的主要区别，即‘样本即研究总体’以及‘视样本为从某一总体分布中抽取’的两种视角。
+                                </p>
+                            </li>
+
+                        </ul>
+                </details>
+
+                
+                <details>
+                        <summary>Observational Studies with Corvariates(work in progress)</summary>
+                        <ul>
+                            <li>
+                                <a href="./Causal/notes/RCT_and_OB_math__with_X_0202.pdf">Observational Studies with Corvariates</a>
+                                <p>主要讨论了考虑协变量的情况下的一些estimators，在观测性研究中如何分析。
+                                </p>
+                            </li>
+
+                        </ul>
+                </details>
+
+                <details>
+                        <summary>Overlap and Balance(work in progress)</summary>
+                        <ul>
+                            <li>
+                                <a href="./Causal/notes/RCT_and_OB_math__overlap___balance_0202.pdf">Overlap and Balance</a>
+                                <p>关于overlap以及balance的note，讨论这两个概念在‘总体假设’和‘样本表现’维度的定义，以及他们之间的关系，以及高维情况下的分析，以及match方法的分析。一个经典的假设/事实（？）是，当我们的样本T=0/T=1组的corvariate balance比较好的时候，我们的估计往往对于模型的要求就更少，目前关于这个问题还在思考，比如如何从数学上去理解分析。
+                                </p>
+                            </li>
+
+                        </ul>
+                </details>
+                
+                <details>
+                    <summary>Strict overlap</summary>
+                    The final project:
+                    <a href='./overlap/report_Overlap_with_high_dimensional_covariates.pdf'>report</a> and presentation <a href='./overlap/slides_Overlap_with_high_dimensional_covariates.pdf'>slides</a> of paper <a href="https://www.sciencedirect.com/science/article/pii/S0304407620302694">Overlap in observational studies with high-dimensional covariates</a>
+                </details>
+
+
+                <details>
+                        <summary>Causal Inference in Economists and Statisticians Views(work in progress)</summary>
+                        <ul>
+                            <li>
+                                <a href="./Causal/notes/Causal_Effect__Regression_Analysis_and_Potential_Outcomes.pdf">Regression Analysis and Potential Outcomes</a>
+                                <p>主要讨论了treatment是二维情况下的OLS/DIM estimator和IV estimator。很有趣的是，从经典经济学的回归分析视角和统计学因果推断潜在结果的视角来看，同样的数据和同一个estimator，有着不同的假设和分析框架。
+                                   IV的部分主要是Angrist, Imbens, Rubin (1996, JASA)的这篇非常厉害的论文。
+                                </p>
+                            </li>
+
+                        </ul>
+                </details>
+
+                <details>
+                        <summary>大厂的用户增长在做什么？（under construction）</summary>
+                        <ul>
+                            <li>
+                                <p>2025.2-2025.6在字节电商用增团队做了一段实习，学习到了很多。
+                                </p>
+                            </li>
+
+                        </ul>
+                </details>
+
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
