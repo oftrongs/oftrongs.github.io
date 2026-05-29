@@ -69,7 +69,119 @@
                 <p> (2) <a href="https://arxiv.org/abs/2305.18793">A First Course in Causal Inference</a> by Peng Ding;
                 <p> (3) <a href="https://web.stanford.edu/~swager/causal_inf_book.pdf">Causal Inference: A Statistical Learning Approach</a> by Stefan Wager.
     
-                <details>
+
+                <p class="mt-4 mb-2"><strong>Observational Studies with Covariates</strong></p>
+                <ul>
+                    <li>
+                        <a href="./Causal/notes/Observational_Studies_with_Covariates__ppt_.pdf">[slide] Observational Studies with Covariates</a>
+                        <p>
+                            主要讨论了考虑存在协变量的情况下，从数据生成的视角分析观测性研究。
+                            讨论了比如Unconfoundedness这个假设告诉了我们什么，estimator纳入协变量信息带来的改善，以及CATE估计的一些话题。
+                        </p>
+                    </li>
+                </ul>
+
+                <p class="mt-4 mb-2"><strong>Overlap and Balance</strong></p>
+                <ul>
+                    <li>
+                        <a href="./Causal/notes/Overlap_and_Balance__ppt_.pdf">[slide] Overlap and Balance (work in progress)</a>
+                        <p>
+                            关于overlap以及balance的note，讨论一些文献中overlap assumption的必要性，
+                            以及overlap和balance之间的关系和这两个概念在‘总体假设’和‘样本表现’维度的定义和度量，
+                            以及高维情况下的表现（D’Amour et al. 2021），并且基于这两个概念的统计方法。
+                            一个经典的假设/事实是，当我们的样本T=0/T=1组的covariate balance比较好的时候，
+                            我们的估计往往对于模型的要求就更少，目前关于这个问题还在思考，比如如何从数学上去理解分析。
+                        </p>
+                    </li>
+                    <li>
+                        <a href="./Causal/overlap/report_Overlap_with_high_dimensional_covariates.pdf">Report</a>
+                        and presentation
+                        <a href="./Causal/overlap/slides_Overlap_with_high_dimensional_covariates.pdf">slides</a>
+                        of paper
+                        <a href="https://www.sciencedirect.com/science/article/pii/S0304407620302694">Overlap in observational studies with high-dimensional covariates</a>
+                        <p>
+                            高维情况下关于overlap的分析，很有意思。高维情况下的overlap与balance的讨论对于深度模型来说也是很重要的话题（？）。
+                        </p>
+                    </li>
+                </ul>
+
+                <p class="mt-4 mb-2"><strong>Deep Causal Models and Machine Learning for Causal Inference</strong></p>
+                <ul>
+                    <li>
+                        <a href="./Causal/Using_Machine_Learning_for_Causal_Inference__a_review.pdf">Using Machine Learning for Causal Inference: a review</a>
+                        <p>
+                            对于ML相关方法在Causal estimands（potential outcomes框架下）领域的一些model做了文献方面的总结，
+                            比较有意思的部分是ML-based的方法怎么用于causal task的statistical intuition，
+                            比如哪些问题比较适合什么样的ML框架，也涉及深度学习因果模型即业界称之为的'Uplift Models'，其实是高等机器学习这门课的大作业。
+                        </p>
+                    </li>
+
+                    <li> 
+                        <p> 2025.2-2025.7在字节电商用增团队做了一段实习，学习到了很多，后面有时间的话总结一下causal machine learning的文献和知识点以及通用经验。 
+                        </p> 
+                    </li>
+                </ul>
+
+                <!-- <h5 class="mt-4">Simulation Settings in Causal Inference</h5> -->
+                <p class="mt-4 mb-2"><strong>Simulation Settings in Causal Inference</strong></p>
+                <ul>
+                    <li>
+                        <a href="./Causal/simulation_settings.pdf">Review of some simulation settings in causal inference</a>
+                        <p>
+                            整理了一些因果推断经典论文中 simulation 的 settings。
+                            在满足论文假设并且符合想要研究的场景特征下，对于 setting 的设计还是有很多可以选择的空间。
+                            这里面有很多并不 trivial 的地方，比如：
+                        </p>
+
+                        <ul class="mb-1">
+                            <li>X 的分布，例如正态分布、uniform 分布、混合分布等；</li>
+                            <li>
+                                E(Y(0)|X) 和 E(Y(1)-Y(0)|X) 的设定，例如里面用到的 X 分别是哪些
+                                （可以将 X 分类为 prognostic variable, instrument variable, confounder 等）【补充一下图】，
+                                以及模型各自的复杂度如何。一个很经典的例子是
+                                <a href="https://www.pnas.org/doi/abs/10.1073/pnas.1804597116">Künzel, Sören R., et al. (2019)</a>
+                                的 Fig. 1；
+                            </li>
+                            <li>
+                                E(Y(0)) 和 E(Y(1)-Y(0)) 的相对数量级大小。
+                                之前在一篇清华博士论文里面看到的实验结论是：
+                                在树模型上，如果这两者绝对值差距不大的话更好估计；
+                                但如果 treatment effect 比较弱就不好估计，
+                                且主要原因是 E(Y(0)) 的重要变量在 T=0/T=1 组分布不均；
+                            </li>
+                            <li>信噪比，或者模型训练参数量和数据量相对大小；</li>
+                            <li>true model 是否线性；</li>
+                            <li>是否 well-specified；</li>
+                            <li>etc...</li>
+                        </ul>
+
+                    </li>
+                </ul>
+
+                <p class="mt-4 mb-2"><strong>Two Views: Finite Population and Super Population</strong></p>
+                <ul>
+                    <li>
+                        <a href="./Causal/notes/Causal_Two_points_of_view.pdf">[note] Two views: Finite Population and Super Population</a>
+                        <p>
+                            主要讨论了不考虑协变量的情况下的一些estimators，以及随机实验与观测性研究的主要区别，
+                            即‘样本即研究总体’以及‘视样本为从某一总体分布中抽取’的两种视角。
+                        </p>
+                    </li>
+                </ul>
+
+                <p class="mt-4 mb-2"><strong>Causal Inference in Economists and Statisticians Views</strong></p>
+                <ul>
+                    <li>
+                        <a href="./Causal/notes/Causal_Effect__Regression_Analysis_and_Potential_Outcomes.pdf">Regression Analysis and Potential Outcomes</a>
+                        <p>
+                            主要讨论了treatment是二维情况下的OLS/DIM estimator和IV estimator。IV的部分主要是Angrist, Imbens, Rubin (1996, JASA)这篇非常厉害的论文。
+                            很有趣的是，从经典经济学的回归分析视角和统计学因果推断潜在结果的视角来看，同样的数据和同一个estimator，有着不同的假设和分析框架。
+                        </p>
+                    </li>
+                </ul>
+
+            </div>
+                <!-- <details>
                         <summary>Some notes</summary>
 
                         <ul>
@@ -160,17 +272,6 @@
 
                         </ul>
                 </details>
-
-                <!-- <details>
-                        <summary>大厂的用户增长在做什么？（under construction）</summary>
-                        <ul>
-                            <li>
-                                <p>2025.2-2025.6在字节电商用增团队做了一段实习，学习到了很多。
-                                </p>
-                            </li>
-
-                        </ul>
-                </details> -->
 
             </div>
         </div>
