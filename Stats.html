@@ -20,8 +20,9 @@
                 <div class="list-group list-group-flush">
                     <!-- <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Contact.html">Contact</a> -->
                     <!-- <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Stats.html">Stats</a>-->
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Stats&ML.html">Stats&ML</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Stats.html">Statistics</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Causal.html">Causal Inference</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="ML.html">Machine Learning</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="RL.html">Reinforcement Learning</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Stats&Env.html">Stats&Env</a>
                     <!-- <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Stats&Econ.html">Stats&Econ</a> -->
@@ -53,50 +54,51 @@
                     </div>
                 </nav>
                 <!-- Page content-->
-                <div class="container-fluid">
+                <div class="container-fluid"> 
                     <h2 class="mt-4">Statistics</h2>
                     <!-- <p>In this page you can find some notes about Statistics, Machine Learning and Deep Learning(or things related to coding).</p> -->
 
-                    <details>
-                        <summary>Sample size in Hypothesis Tests</summary>
-                        <ul>
-                            <br>
-                            <li>The main point of this <a href="./Stats&ML/关于假设检验中的样本量.html">note</a> is to find: Is the statement 'more sample, more likely to be significant' true?</li>
-                            <br>
-                            <li>The main content of this <a href="./Stats&ML/sample-size-in-two-sample-test.html">note</a>: for two sample test, how to calculate the minimum sample size when controlling type I error and type II error.</li>
-                    
-                    </details>
+                    <p class="mt-4 mb-2"><strong>Sample size in Hypothesis Tests</strong></p>
+                    <ul>
+                        <li>
+                            The main point of this <a href="./Stats&ML/关于假设检验中的样本量.html">note</a> is to find: Is the statement 'more sample, more likely to be significant' true?
+                        </li>
+                        <li>
+                            The main content of this <a href="./Stats&ML/sample-size-in-two-sample-test.html">note</a>: for two sample test, how to calculate the minimum sample size when controlling type I error and type II error.
+                        </li>
+                    </ul>
 
-                    <details>
-                        <summary>How to understand Regression</summary>
-                        
-                        <ul>
-                            <li>
-                                <p>最新的 working note<a href="./Stats&ML/regression/OLS.pdf">关于OLS的基础</a></p>
-                            </li>
-                            <li>
-                                <a href="./Stats&ML/regression/关于回归分析的拓展？.html">学完回归分析后的问题</a>
-                                <p>很早之前学回归分析的时候写的一些东西，主要做了一些simulation，一个是固定X多次抽取Y看系数估计的分布（对应回归分析课程中学到的东西），一个是多次从多元分布中生成X看X的表现（从X不是固定的角度来想问题），还有多次从总体中抽取X与Y，观察系数估计值的分布情况（X,Y是成对i.i.d的角度）。
+                    <p class="mt-4 mb-2"><strong>How to understand Regression</strong></p>
+                    <ul>
+                        <li>
+                            <p>最新的 working note<a href="./Stats&ML/regression/OLS.pdf">关于OLS的基础</a></p>
+                        </li>
+                        <li>
+                            <a href="./Stats&ML/regression/关于回归分析的拓展？.html">学完回归分析后的问题</a>
+                            <p>
+                                很早之前学回归分析的时候写的一些东西，主要做了一些simulation，一个是固定X多次抽取Y看系数估计的分布（对应回归分析课程中学到的东西），一个是多次从多元分布中生成X看X的表现（从X不是固定的角度来想问题），还有多次从总体中抽取X与Y，观察系数估计值的分布情况（X,Y是成对i.i.d的角度）。
                                 <br>当时写这些主要是因为：对'如何从统计的角度理解OLS'有疑惑，对于'X作为设计矩阵'，'given X得到的结论'的有效性有着疑惑。比如，如何从(X,Y)是i.i.d的角度来理解回归？
-                                </p>
-                            </li>
-                            <li>
-                                <p>关于上述问题，正在写一个新的note<a href="./Stats&ML/regression/如何理解回归.html">（preview）</a></p>
-                            </li>
-                            <li>
-                                <p>推荐教材：<a href="https://arxiv.org/abs/2401.00649">Ding, P. (2025) Linear model and extensions. Chapman & Hall. </a></p>
-                            </li>
-                            
+                            </p>
+                        </li>
+                        <li>
+                            <p>关于上述问题，正在写一个新的note<a href="./Stats&ML/regression/如何理解回归.html">（preview）</a></p>
+                        </li>
+                        <li>
+                            <p>推荐教材：<a href="https://arxiv.org/abs/2401.00649">Ding, P. (2025) Linear model and extensions. Chapman & Hall. </a></p>
+                        </li>
+                    </ul>
 
-                        </ul>
-                    </details>
-
-                    <details>
-                        <summary>Functional Data Analysis</summary>
-                        <p>I am fortunate to be supervised by <a href="https://sites.google.com/view/wenlindai">Prof. Wenlin Dai</a> during my undergraduate studies, during which I learned a lot about Functional Data Analysis, and conducted some research about Fuctional Data Registration. Here is a recommended <a href="https://www.youtube.com/c/FunDataScience">course(FunDataScience)</a> on FDA.
-                    </details>
+                    <p class="mt-4 mb-2"><strong>Functional Data Analysis</strong></p>
+                    <ul>
+                        <li>
+                            <p>
+                                I am fortunate to be supervised by <a href="https://sites.google.com/view/wenlindai">Prof. Wenlin Dai</a> during my undergraduate studies, during which I learned a lot about Functional Data Analysis, and conducted some research about Fuctional Data Registration. Here is a recommended <a href="https://www.youtube.com/c/FunDataScience">course(FunDataScience)</a> on FDA.
+                            </p>
+                        </li>
+                    </ul>
 
                 </div>
+
             </div>
         </div>
         <!-- Bootstrap core JS-->
