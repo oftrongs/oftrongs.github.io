@@ -55,71 +55,72 @@
                 <!-- Page content-->
                 <div class="container-fluid">
                     <h2 class="mt-4">ML&Coding</h2>
-                    <p>In this page you can find some notes about Machine Learning and Deep Learning(or things related to coding).</p>
+                    <p>In this page you can find some notes about Machine Learning and Deep Learning(and things related to coding).</p>
 
                     <div class="note-list">
 
-                        <details>
-                            <summary>待补充</summary>
+                        <p class="mt-4 mb-2"><strong>待补充</strong></p>
+                        <ul>
+                            <li>
                             <p>Spark; Transformer; leetcode刷题想法; DL model实战哪里有改善的地方还有模型参数数量；interesting
-                                的模型框架（LHUC; MMOE）；损失函数设计；</p>
-                        </details>
+                                的模型框架（LHUC; MMOE）；损失函数设计；DL数学基础，梯度回传，梯度爆炸、梯度消失；ML（notDL）特征选择和特征重要性；indentifiable（HDP）；@函数模块函数？；git；</p>
+                            </li>
+                        </ul>
 
-                        <details>
-                            <summary>关于最大似然和最小损失的关系</summary>
+                        <p class="mt-4 mb-2"><strong>关于最大似然和最小损失的关系</strong></p>
                             <p>
-                                <a href="./ML&Coding/about_max_likelihood.html">note</a>
-                            </p>
-                        </details>
-
-                        <details>
-                            <summary>how the parameter class_weight work in tree models</summary>
-                            <p>
-                                <a href="./ML&Coding/how_class_weight_work_in_tree_models.html">
-                                    how the parameter class_weight work in tree models
-                                </a>
-                            </p>
-                            <p>
-                                大二学机器学习的时候，小组大作业做的是关于样本类别分布不均的分类问题探索，
-                                对不同类样本加权是在这类情况下一种比较常见的方法。
-                            </p>
-                            <p>
-                                sklearn中的class_weight参数可以在树模型or线性模型（如逻辑回归等）中使用：
-                                在线性模型里其作用即修改损失函数，对不同类的样本带来的损失赋权重；
-                            </p>
-                            <p>
-                                而对于这个参数如何在树模型中起作用，并没有找到官方的具体说明，
-                                所以我在这个note里面用一些简单的simulation来探索验证对于其加权方式的猜想，
-                                最后结合sklearn这部分的源代码，进一步确定了其加权原理。
-                            </p>
-                        </details>
-
-                        <details>
-                            <summary>Focal Loss</summary>
-                            <p>
-                                关于Focal loss
-                                <a href="https://doi.org/10.48550/arXiv.1708.02002">(paper)</a>
-                                也是和上面的不平衡数据任务一起探索的，
-                                原理就是使得损失函数中少类样本与难分样本的权重更大。
-                            </p>
-                            <p>
-                                这里也放一下在
-                                <a href="./ML&Coding/focal_loss/12_logisticregression+focal loss.ipynb">lr</a>、
-                                <a href="./ML&Coding/focal_loss/13_mlp+focal loss.ipynb">mlp</a>、
-                                <a href="./ML&Coding/focal_loss/14_xgboost+focal loss.ipynb">xgboost</a>
-                                和
-                                <a href="./ML&Coding/focal_loss/15_gbdt+focal loss.ipynb">gbdt</a>
-                                上的代码实现。
+                                <a href="./ML&Coding/about_max_likelihood.html">[note] Max Likelihood and Min Loss function</a>
                             </p>
 
-                            <details>
-                                <summary>Focal loss原理</summary>
-                                <img src="./ML&Coding/focal_loss/原理.png" alt="Focal loss原理">
-                            </details>
-                        </details>
+                        <p class="mt-4 mb-2"><strong>关于机器学习里面的样本加权</strong></p>
 
-                        <details>
-                            <summary>数据预处理时训练集和测试集要做相同操作</summary>
+                            <p>主要是在面对数据不平衡问题中的一些探索</p>
+
+                            <ul>
+                                <li>
+                                    <p>
+                                        <a href="./ML&Coding/how_class_weight_work_in_tree_models.html">
+                                            [note] how the parameter 'class_weight' work in tree models
+                                        </a>
+                                    </p>
+                                    <p>
+                                        大二学机器学习的时候，小组大作业做的是关于样本类别分布不均的分类问题探索，
+                                        对不同类样本加权是在这类情况下一种比较常见的方法。
+                                    </p>
+                                    <p>
+                                        sklearn中的class_weight参数可以在树模型or线性模型（如逻辑回归等）中使用：
+                                        在线性模型里其作用即修改损失函数，对不同类的样本带来的损失赋权重；
+                                    </p>
+                                    <p>
+                                        而对于这个参数如何在树模型中起作用，并没有找到官方的具体说明，
+                                        所以我在这个note里面用一些简单的simulation来探索验证对于其加权方式的猜想，
+                                        最后结合sklearn这部分的源代码，进一步确定了其加权原理。
+                                    </p>
+                                </li>
+
+                            <li> Focal Loss<a href="https://doi.org/10.48550/arXiv.1708.02002">(paper)</a>
+                                <details>
+                                    <summary>Focal loss原理（对少类样本与难分样本加权）</summary>
+                                    <img src="./ML&Coding/focal_loss/原理.png" alt="Focal loss原理">
+                                </details>
+                                <p>
+                                    这里也放一下在
+                                    <a href="./ML&Coding/focal_loss/12_logisticregression+focal loss.ipynb">lr</a>、
+                                    <a href="./ML&Coding/focal_loss/13_mlp+focal loss.ipynb">mlp</a>、
+                                    <a href="./ML&Coding/focal_loss/14_xgboost+focal loss.ipynb">xgboost</a>
+                                    和
+                                    <a href="./ML&Coding/focal_loss/15_gbdt+focal loss.ipynb">gbdt</a>
+                                    上的代码实现。
+                                </p>
+                            </li>    
+                        </ul>
+                        
+                        <p class="mt-4 mb-2"><strong>关于分布式数据处理(主要是Spark)</strong></p>
+                            <p>
+                                <a href="./ML&Coding/cloud_coding_spark/Spark_summary__ppt_.pdf">[note] Analytics on the Cloud (Scala, Spark Basics, Streaming, Graphs) </a>
+                            </p>
+
+                        <p class="mt-4 mb-2"><strong>数据预处理的一个要注意的点</strong></p>
                             <p>
                                 在对数据纳入模型前做预处理（如标准化、PCA等）时，需要注意的是，
                                 我们要对测试集做和训练集<b>相同的操作</b>。
@@ -139,10 +140,8 @@
                                 <a href="./ML&Coding/PCA探索1.html">关于PCA的simulation</a>，
                                 当然理解原理了就知道正确的方法的效果当然会较好。
                             </p>
-                        </details>
 
-                        <details>
-                            <summary>PCA降维对于非深度机器学习模型的影响</summary>
+                        <p class="mt-4 mb-2"><strong>PCA降维对于非深度机器学习模型的影响</strong></p>
                             <p>
                                 对于非深度的机器学习模型来说，高维输入特征时，
                                 PCA降维对于训练速度有显著提升，因为输入特征可以看做是减少了；
@@ -152,18 +151,14 @@
                                 后面会放一个关于PCA的note，最近看论文发现方差矩阵的operator norm
                                 可以一定程度上反应X的相关性，结论还蛮有意思的，和PCA也有一定关联。
                             </p>
-                        </details>
 
-                        <details>
-                            <summary>Dropout层和BatchNormalization层</summary>
+                        <p class="mt-4 mb-2"><strong>Dropout层和BatchNormalization层</strong></p>
                             <p>
                                 在深度学习里面，有些情况下，
                                 Dropout层和BatchNormalization层对于防止过拟合、提升训练效果有奇效。
                             </p>
-                        </details>
 
-                        <details>
-                            <summary>About copy and deepcopy</summary>
+                        <p class="mt-4 mb-2"><strong>About copy and deepcopy</strong></p>
                             <p>
                                 <a href="./ML&Coding/Copy and DeepCopy.html">note</a>
                             </p>
@@ -179,14 +174,11 @@
                                 A deep copy constructs a new compound object and then, recursively,
                                 inserts copies into it of the objects found in the original.
                             </p>
-                        </details>
 
-                        <details>
-                            <summary>关于softmax不是identifiable的note</summary>
+                        <p class="mt-4 mb-2"><strong>关于softmax不是identifiable的note</strong></p>
                             <p>
                                 <a href="./ML&Coding/softmax.html">note</a>
                             </p>
-                        </details>
 
                     </div>
                 </div>
