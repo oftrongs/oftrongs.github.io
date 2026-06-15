@@ -56,11 +56,186 @@
                 <!-- Page content-->
                 <div class="container-fluid">
                     <h4 class="mt-4">Here are some things I learned/summarized/found intersting.</h4>
+                    
+                    <style>
+                            table {
+                                border-collapse: collapse;
+                                width: 100%;
+                                font-size: 0.95em;
+                            }
+                            
+                            /* 表头下粗黑线 */
+                            thead {
+                                border-top: 2px solid #000;
+                                border-bottom: 1.5px solid #000;
+                            }
+                            
+                            /* 表体底部粗黑线 */
+                            tbody {
+                                border-bottom: 2px solid #000;
+                            }
+                            
+                            /* 内容行之间灰色细线 */
+                            tbody tr {
+                                border-bottom: 1px solid #ccc;
+                            }
+                            
+                            /* 最后一行不需要灰色线（因为 tbody 底部有黑线） */
+                            tbody tr:last-child {
+                                border-bottom: none;
+                            }
+                            
+                            th, td {
+                                padding: 10px 12px;
+                                text-align: left;
+                                vertical-align: top;
+                            }
+                            
+                            th {
+                                font-weight: 600;
+                            }
+                    </style>
+                    
+                    <br>
                     <details>
                         <summary><a href="./Clutter/summary_of_undergraduate_courses/index_summary_of_undergraduate_courses.html">summary of undergraduate courses</a></summary>
-                        <p>In this part, I would briefly summarize the courses I've learned during my undergraduate study.
+                        <br>
+                        <p>本科课程总结。In this part, I would briefly summarize the courses I've learned during my undergraduate study.
                         The basic information of each course, (what questions can you answer after this course, )as well as my suggestions for learning this course would be included.
                         </p>
+                    </details>
+                    
+                    <br>
+                    <details>
+                        <summary>summary of master courses in THU</a></summary>
+                        <br>
+                        <p>在清华哥大BA项目第一年（24-25秋季、春季学期）在清华学习的课程总结，一共上了x门课程共x学分，下面的表格总结了比较推荐的课程。
+                        </p>
+
+                        <table>
+                            <thead>
+                                <tr> 
+                                    <th>Course Name</th>
+                                    <th>Topics</th>
+                                    <th>Notes</th>
+                                    <th>Comments</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>因果推断<br><a href="https://www2.stat.duke.edu/~fl35/CausalInferenceClass.html">（course website）</a></td>
+                                    <td>Randomized experiments; Observational studies; IV; RDD</td>
+                                    <td><a href="./Causal/（已压缩）causal.pdf">notes</a> <br>(more in Home&rarr;Causal Inference)</td>
+                                    <td>主要讲因果推断potential outcomes框架，随机试验分析和观测性分析，以及异质性估计和一些计量的经典方法。是求真书院的一门课，教授是Duke来访学的Fan Li老师，很喜欢老师的授课方式。第一次听统计学前沿课题的课程，课件的每一节都引用了很多文献。</td>
+                                </tr>
+                                <tr>
+                                    <td>机器学习及python应用+商务智能</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>优化理论与方法</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>高等计量经济学</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>又学了一遍计量。</td>
+                                </tr>
+                                <tr>
+                                    <td>数据分析：推断与决策</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>商务分析整合实践</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>是校企合作的一门课，主要的内容就是和公司方进行每周一次的讨论，用商业分析的知识解决企业的某个需求。
+                                        <br>我们小组两个人做的是一个小型的对话智能体，用coze搭建了一个工作流模拟签证官对话流程，并收集用户交互数据进行分析（感想是收集数据真不容易），算是一个比较有意思的小型产品落地全流程模拟。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </details>
+
+                    <br>
+                    <details>
+                        <summary>summary of master courses in CU</a></summary>
+                        <br>
+                        <p>在哥大工院MSOR项目就读（25Fall+26Spring）的课程总结，一共上了10门课程共30学分，下面的表格总结了比较推荐的课程。
+                            <br><br>以我修读的课程为例，总结一下国外硕士课程的特点：
+                        <ol>
+                            <li>课程考试基本都可以带1-2页double-sided的cheatsheets（以我修读的课程来说，10门课程中有x门是试卷考核，其中x门可以带）。</li>
+                            <li>大多数课程的workload比较大，每周/每两周会有一次日常作业。</li>
+                            <li>所有教授会明确写出自己和助教的office hours。</li>
+                            <li>关于课程资料和作业的平台，主要用Courseworks/Canvas（10/10，课程资料和学期安排）和Gradescope（/10，用于作业提交，学生需要标记题目对应的页数方便批改）和Ed Discussion（/10，用于课程公告和匿名提问）。</li>
+                            <li>大多数课程的考试/作业的公布/截止时间安排会在学期初就公布，少部分课程会在学期中再确定期末时间。</li>
+                            <li>主要沟通方式是邮箱。</li>
+                        </ol>
+                        </p>
+
+                        <table>
+                            <thead>
+                                <tr>    
+                                    <th>Course #</th>
+                                    <th>Course Name</th>
+                                    <th>Topics</th>
+                                    <th>Notes</th>
+                                    <th>Comments</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>IEOR4106</td>
+                                    <td>Stochastic Models</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>主要内容是随机过程，和本科比起来的话会多涉及一些排队论的内容。教授是David Yao，超厉害的老师，纯板书授课。</td>
+                                </tr>
+                                <tr>
+                                    <td>IEOR4526</td>
+                                    <td>Analytics on the Cloud</td>
+                                    <td>Scala; Spark; Streaming; Graph</td>
+                                    <td><a href="./ML&Coding/cloud_coding_spark/Spark_summary__ppt_.pdf">notes</a> <br>(see also Home&rarr;ML&rarr;Spark)</td>
+                                    <td>主要讲Scala和Spark，考核是期中和期末选择题+开卷手写代码，这种手写代码的风格让人想起本科学程序设计/python/数据结构:)</td>
+                                </tr>
+                                <tr>
+                                    <td>ORCS6529<br>(phd)</td>
+                                    <td>Advanced Reinforcement Learning</td>
+                                    <td>MDP; Q-learning; Policy Gradient; PPO; Bandits; RLHF; Multi-agent RL</td>
+                                    <td><td><a href="./RL/RL_summary__ppt_.pdf">notes</a><br>(see also Home&rarr;RL)</td></td>
+                                    <td>主要内容是online RL，因为是PHD level讲了很多相关的推导。workload比较大，3次推导HW，4次编程lab，期中笔试+期末大作业。教授是Shipra Agrawal很厉害很nice的老师。</td>
+                                </tr>
+                                <tr>
+                                    <td>IEOR8100<br>(phd)</td>
+                                    <td>High-dimensional Probability with Applications</td>
+                                    <td>Concentration inequalities; Suprema and Chaining; Gaussian and Rademacher Complexities;</td>
+                                    <td>-</td>
+                                    <td>主要是高维概率论的内容，也涉及一些高维统计learning theory。学高维的日常belike：这也能证...？</td>
+                                </tr>
+                                <tr>
+                                    <td>STAT4224</td>
+                                    <td>Bayesian Statistics</td>
+                                    <td>Bayesian models; Posterior approximation; Hierarchical models; 
+                                        <br>MCMC</td>
+                                    <td>-</td>
+                                    <td>讲贝叶斯统计的基本内容。哥大统计学院很多课程鼓励其他学院的学生修读，有一些还会专门开一个课号给非统计硕士的同学。</td>
+                                </tr>
+                                <tr>
+                                    <td>IEOR4404</td>
+                                    <td>Simulation</td>
+                                    <td>-</td>
+                                    <td><a href="./Clutter/summary_of_columbia_msor_courses/cheatsheets/cheatsheets_of_simulation.pdf">cheatsheets</a></td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </details>
                 
                 </div>
