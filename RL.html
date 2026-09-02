@@ -69,6 +69,9 @@
             <div class="container-fluid">
                 <h2 class="mt-4">Reinforcement Learning & LLM</h2>
 
+                Here are some of my notes related to Reinforcement Learning and Large Language Models (or generally,
+                Policy Learning).
+
                 <details>
                     <summary>待补充</summary>
                     <p>AI Infra自查list; 投机推理; Modern RL Methods</p>
@@ -79,12 +82,10 @@
                     <li>
                         <a href="./RL/RL_summary.pdf">[slide] Reinforcement Learning Basics</a>
                         <p>
-                            总结了强化学习这门课的内容，主要是MDP与policy learning基础、以及Q-value based learning、Policy
+                            总结了强化学习（Columbia University ORCS6529, Prof. Shipra Agrawal）这门课的内容，主要是MDP与policy
+                            learning基础、以及Q-value based learning、Policy
                             gradient算法和在马尔科夫假设下的理论证明。
                         </p>
-                        <p>I learned the Advanced Reinforcement Learning(ORCS6529) course of Prof. Shipra Agrawal during my
-                    master in Columbia University, which I highly recommend. And here are some of my notes related to
-                    Reinforcement Learning (or generally, Policy Learning).</p>
                     </li>
                 </ul>
 
@@ -98,34 +99,39 @@
                     </li>
                 </ul> -->
 
-                <p class="mt-4 mb-2"><strong>LLM related</strong></p>
+                <p class="mt-4 mb-2"><strong>LLM 推理相关细节（主要是Infra角度）</strong></p>
                 <ul>
                     <li>
-                        <p>
-                            LLM 的一个细节，config.json 和 generate_config.json 中的 eos_token_id 可能不同（e.g. Qwen2-0.5B-Instruct
-                            模型的 config 中 "eos_token_id": 151645 而 generate_config 中"eos_token_id":
-                            [151645,151643]），在模型导出用于推理生成时需注意 config 一致性。
-                        </p>
+                        <p> LLM 推理相关细节（主要是Infra角度）</p>
+                        <ul class="mb-1">
+                            <li>关于停止符：config.json 和 generate_config.json 中的 eos_token_id 可能不同（e.g. Qwen2-0.5B-Instruct），在模型导出用于推理生成时需注意 config 一致性。</li>
+                            <li>待补充</li>
+                        </ul>
                     </li>
+                </ul>
 
-                    <li> 手写LLM结构（Qwen2, Qwen3, Hy-MT2 dense）
-                        <details>
-                            <summary>Qwen2</summary>
-                            <img src="./LLM/hand_written_model_structure/Qwen2.png" alt="" style="max-width: 100%; height: auto;">
-                        </details>
-                        <details>
-                            <summary>Qwen3</summary>
-                            <img src="./LLM/hand_written_model_structure/Qwen3.png" alt="" style="max-width: 100%; height: auto;">
-                        </details>
-                        <details>
-                            <summary>Qwen3.5</summary>
-                            <img src="./LLM/hand_written_model_structure/Qwen3_5.png" alt="" style="max-width: 100%; height: auto;">
-                        </details>
-                        <details>
-                            <summary>Hy-MT2 dense (hunyuan_v1_dense)</summary>
-                            <img src="./LLM/hand_written_model_structure/hunyuan_v1_dense.png" alt="" style="max-width: 100%; height: auto;">
-                        </details>
-                    </li>
+                <p class="mt-4 mb-2"><strong>手写LLM结构</strong></p>
+                <ul>
+                    <details>
+                        <summary>Qwen2</summary>
+                        <img src="./LLM/hand_written_model_structure/Qwen2.png" alt=""
+                            style="max-width: 100%; height: auto;">
+                    </details>
+                    <details>
+                        <summary>Qwen3</summary>
+                        <img src="./LLM/hand_written_model_structure/Qwen3.png" alt=""
+                            style="max-width: 100%; height: auto;">
+                    </details>
+                    <details>
+                        <summary>Qwen3.5</summary>
+                        <img src="./LLM/hand_written_model_structure/Qwen3_5.png" alt=""
+                            style="max-width: 100%; height: auto;">
+                    </details>
+                    <details>
+                        <summary>Hy-MT2 dense (hunyuan_v1_dense)</summary>
+                        <img src="./LLM/hand_written_model_structure/hunyuan_v1_dense.png" alt=""
+                            style="max-width: 100%; height: auto;">
+                    </details>
                 </ul>
 
             </div>
