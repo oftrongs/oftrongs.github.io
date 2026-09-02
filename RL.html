@@ -11,7 +11,11 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <style>a{text-decoration: none;}</style>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,17 +23,20 @@
         <!-- Sidebar-->
         <div class="border-end bg-white" id="sidebar-wrapper">
             <div class="sidebar-heading border-bottom bg-light">W-Archive</div>
-                <div class="list-group list-group-flush">
-                    <!-- <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Contact.html">Contact</a> -->
-                    <!-- <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Stats.html">Stats</a>-->
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Stats.html">Statistics</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Causal.html">Causal Inference</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="ML.html">Machine Learning</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="RL.html">Reinforcement Learning</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Stats&Env.html">Stats&Env</a>
-                    <!-- <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Stats&Econ.html">Stats&Econ</a> -->
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Clutter.html">Clutter</a>
-                </div>
+            <div class="list-group list-group-flush">
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="index.html">Home</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="Stats.html">Statistics</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Causal.html">Causal
+                    Inference</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="ML.html">Machine
+                    Learning</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="RL.html">RL & LLM</a>
+                <!-- <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Stats&Env.html">Stats&Env</a> -->
+                <!-- <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Stats&Econ.html">Stats&Econ</a> -->
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="Clutter.html">Clutter</a>
+            </div>
         </div>
         <!-- Page content wrapper-->
         <div id="page-content-wrapper">
@@ -60,10 +67,66 @@
             </nav>
             <!-- Page content-->
             <div class="container-fluid">
-                <h2 class="mt-4">Reinforcement Learning</h2>
+                <h2 class="mt-4">Reinforcement Learning & LLM</h2>
 
-                <p>I learned the Advanced Reinforcement Learning(ORCS6529) course of Prof. Shipra Agrawal during my master in Columbia University, which I highly recommend. And here are some of my <a href="./RL/RL_summary__ppt_.pdf">notes</a> of the course.
+                <details>
+                    <summary>待补充</summary>
+                    <p>AI Infra自查list; 投机推理; Modern RL Methods</p>
+                </details>
 
+                <p class="mt-4 mb-2"><strong>Reinforcement Learning Basics</strong></p>
+                <ul>
+                    <li>
+                        <a href="./RL/RL_summary.pdf">[slide] Reinforcement Learning Basics</a>
+                        <p>
+                            总结了强化学习这门课的内容，主要是MDP与policy learning基础、以及Q-value based learning、Policy
+                            gradient算法和在马尔科夫假设下的理论证明。
+                        </p>
+                        <p>I learned the Advanced Reinforcement Learning(ORCS6529) course of Prof. Shipra Agrawal during my
+                    master in Columbia University, which I highly recommend. And here are some of my notes related to
+                    Reinforcement Learning (or generally, Policy Learning).</p>
+                    </li>
+                </ul>
+
+                <!-- <p class="mt-4 mb-2"><strong>Modern Policy Learning Methods</strong></p>
+                <ul>
+                    <li>
+                        <a href="./RL/Modern_RL_methods.pdf">[slide] Modern Policy Learning Methods (working)</a>
+                        <p>
+                            总结一些更近期的policy learning的方法，比如TRPO、PPO、Conservative Q-learning、Decision Transformer等。
+                        </p>
+                    </li>
+                </ul> -->
+
+                <p class="mt-4 mb-2"><strong>LLM related</strong></p>
+                <ul>
+                    <li>
+                        <p>
+                            LLM 的一个细节，config.json 和 generate_config.json 中的 eos_token_id 可能不同（e.g. Qwen2-0.5B-Instruct
+                            模型的 config 中 "eos_token_id": 151645 而 generate_config 中"eos_token_id":
+                            [151645,151643]），在模型导出用于推理生成时需注意 config 一致性。
+                        </p>
+                    </li>
+
+                    <li> 手写LLM结构（Qwen2, Qwen3, Hy-MT2 dense）
+                        <details>
+                            <summary>Qwen2</summary>
+                            <img src="./LLM/hand_written_model_structure/Qwen2.png" alt="">
+                        </details>
+                        <details>
+                            <summary>Qwen3</summary>
+                            <img src="./LLM/hand_written_model_structure/Qwen3.png" alt="">
+                        </details>
+                        <details>
+                            <summary>Qwen3.5</summary>
+                            <img src="./LLM/hand_written_model_structure/Qwen3_5.png" alt="">
+                        </details>
+                        <details>
+                            <summary>Hy-MT2 dense (hunyuan_v1_dense)</summary>
+                            <img src="./LLM/hand_written_model_structure/hunyuan_v1_dense.png" alt="">
+                        </details>
+                    </li>
+                </ul>
 
             </div>
         </div>
