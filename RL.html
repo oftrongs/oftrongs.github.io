@@ -69,7 +69,8 @@
             <div class="container-fluid">
                 <h2 class="mt-4">Reinforcement Learning & LLM</h2>
 
-                Here are some of my notes related to Reinforcement Learning and Large Language Models (or more generally,
+                Here are some of my notes related to Reinforcement Learning and Large Language Models (or more
+                generally,
                 Policy Learning).
 
                 <div class="note-list">
@@ -91,26 +92,38 @@
                         </li>
                     </ul>
 
-                    <!-- <p class="mt-4 mb-2"><strong>Modern Policy Learning Methods</strong></p>
-                <ul>
-                    <li>
-                        <a href="./RL/Modern_RL_methods.pdf">[slide] Modern Policy Learning Methods (working)</a>
-                        <p>
-                            总结一些更近期的policy learning的方法，比如TRPO、PPO、Conservative Q-learning、Decision Transformer等。
-                        </p>
-                    </li>
-                </ul> -->
-
-                    <p class="mt-4 mb-2"><strong>LLM 推理相关细节（主要是Infra角度）</strong></p>
+                    <p class="mt-4 mb-2"><strong>Modern Policy Learning Methods</strong></p>
                     <ul>
                         <li>
-                            <p> LLM 推理相关细节（主要是Infra角度）</p>
-                            <ul class="mb-1">
-                                <li>关于停止符：config.json 和 generate_config.json 中的 eos_token_id 可能不同（e.g.
-                                    Qwen2-0.5B-Instruct），在模型导出用于推理生成时需注意 config 一致性。</li>
-                                <li>待补充</li>
-                            </ul>
+                            <a href="./RL/Modern_RL_methods.pdf">[slide] Modern Policy Learning Methods (working)</a>
+                            <p>
+                                总结一些更近期的policy learning的方法，比如TRPO、PPO、DPO、Decision Transformer等。
+                                <!-- 其中conservative policy gradient method的一系列工程化近似（在存储复杂度、计算迭代成本上的优化）【xx】。 -->
+                            </p>
                         </li>
+                    </ul>
+
+                    <!-- <p class="mt-4 mb-2"><strong>RL八股</strong></p>
+                    <ul class="mb-1">
+                    <details>
+                        <summary>PPO,GRPO公式</summary>
+                        <p>请看note</p>
+                    </details>
+                    </ul> -->
+
+                    <p class="mt-4 mb-2"><strong>LLM 推理相关细节（Infra角度）</strong></p>
+                    <ul class="mb-1">
+                        <li>关于停止符：config.json 和 generate_config.json 中的 eos_token_id 可能不同（e.g.
+                            Qwen2-0.5B-Instruct），在模型导出用于推理生成时需注意 config 一致性。</li>
+                        <li>掉包的额外时间开销</li>
+                        <li>Flash Attention: </li>
+                        <li>GEMM(General Matrix multiply) 和 GEMV(General Matrix-Vector multiply): </li>
+                        <li>Continuous Batching</li>
+                        <li>GPU性能测试基本概念：散热、功率、机器的硬件频率对性能的影响</li>
+                        <li>Attention在各种Batching条件下的计算过程</li>
+                        <li>旋转位置编码的x种上下文扩展方式</li>
+                        <li>memory-bound / compute-bound</li>
+                        <li>KV Cache 怎么存</li>
                     </ul>
 
                     <p class="mt-4 mb-2"><strong>手写LLM结构</strong></p>
